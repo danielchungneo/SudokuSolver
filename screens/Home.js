@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 import {
   StyleSheet,
   Text,
   SafeAreaView,
   View,
   TouchableOpacity,
-} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
-import Colors from '../constants/Colors';
-import Fonts from '../constants/Fonts';
+import Colors from "../constants/Colors";
+import Fonts from "../constants/Fonts";
 
 export default function Home(props) {
   return (
@@ -23,22 +23,15 @@ export default function Home(props) {
         </View>
         <View style={styles.startButtonContainer}>
           <TouchableOpacity
-            onPress={() => props.navigation.navigate('MainUI')}
+            onPress={() => props.navigation.navigate("MainUI")}
             style={styles.startButton}
           >
             <Text style={styles.startButtonText}>Start Solving</Text>
           </TouchableOpacity>
         </View>
-
-        <View style={styles.startButtonContainer}>
-          <TouchableOpacity
-            onPress={() => props.navigation.navigate('Board')}
-            style={styles.startButton}
-          >
-            <Text style={styles.startButtonText}>Testing Board View</Text>
-          </TouchableOpacity>
+        <View style={{marginVertical: 25}}>
+          <Text style={{color: "white"}}>Version 2.0</Text>
         </View>
-
       </LinearGradient>
     </SafeAreaView>
   );
@@ -48,24 +41,24 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     backgroundColor: Colors.grey,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   background: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   textContainer: {
     margin: 15,
-    height: '25%',
-    width: '90%',
+    height: "25%",
+    width: "90%",
     backgroundColor: Colors.blue,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 20,
     borderWidth: 2,
   },
@@ -78,18 +71,18 @@ const styles = StyleSheet.create({
 
   startButtonContainer: {
     backgroundColor: Colors.blue,
-    height: '10%',
-    width: '40%',
+    height: "10%",
+    width: "40%",
     borderWidth: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 20,
   },
 
   startButton: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   startButtonText: {
